@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "404809540614",
+    "firebase_url": "https://elite-rozgar.firebaseio.com",
+    "project_id": "elite-rozgar",
+    "storage_bucket": "elite-rozgar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404809540614:android:aa5a31adab370babd2cf87",
+        "android_client_info": {
+          "package_name": "com.app.eliterozgar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404809540614-dqde5rh09ahlmh815bknt00nkp7t4pn4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.eliterozgar",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "404809540614-bvgg14r8nns9mpn2u5ld0vfgin9f91io.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqf2fYocVV7AUtHrrhEy7o-9IMDrjekZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404809540614-bvgg14r8nns9mpn2u5ld0vfgin9f91io.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "404809540614-76ne8kafflejebhsh59dd41df66imqk1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.eliteRozgar"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404809540614:android:efbd37a0f6a2b2a7d2cf87",
+        "android_client_info": {
+          "package_name": "com.app.eliterozgarservice"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404809540614-g186u82undfibnbp62k6qnvttpq0rpd6.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.app.eliterozgarservice",
+            "certificate_hash": "7c8569506869e11230b20f2a8f48a5a85b7e77ba"
+          }
+        },
+        {
+          "client_id": "404809540614-bvgg14r8nns9mpn2u5ld0vfgin9f91io.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBqf2fYocVV7AUtHrrhEy7o-9IMDrjekZU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404809540614-bvgg14r8nns9mpn2u5ld0vfgin9f91io.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "404809540614-76ne8kafflejebhsh59dd41df66imqk1.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.app.eliteRozgar"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
