@@ -20,6 +20,7 @@ import RNPickerSelect from 'react-native-picker-select';
 import ImagePicker from 'react-native-image-crop-picker';
 import {SignUpform} from '../../helper/api';
 import Loader from '../../helper/Loader';
+import Validations from '../../helper/Validations';
 class index extends Component {
   constructor(props) {
     super(props);
@@ -35,7 +36,9 @@ class index extends Component {
       profile_pic: '',
       profile_picObj: {},
       hourly_rate:'',
-      loading:false
+      loading:false,
+      experience:'',
+      service_id:''
     };
   }
 
@@ -88,7 +91,56 @@ class index extends Component {
       }
     });
   }
+  isFormFilled() {
+   
+    let full_name = Validations.checkrequired(this.state.full_name);
+    let phone = Validations.checkrequired(this.state.phone);
+    let email = Validations.checkEmail(this.state.email);
+    let profile_pic = Validations.checkrequired(this.state.profile_pic);
+    let doc_front_snap = Validations.checkrequired(this.state.frontId);
+    let doc_back_snap = Validations.checkrequired(this.state.backId);
+   
+    let hourly_rate = Validations.checkrequired(this.state.hourly_rate);
+    let service_id = Validations.checkrequired(this.state.service_id);
+    let experience = Validations.checkrequired(this.state.experience);
+
+    if (
+      full_name &&
+      phone &&
+      email &&
+      profile_pic &&
+      doc_back_snap &&
+      hourly_rate &&
+      doc_front_snap&&
+      service_id&&
+      experience
+    ) {
+      return true;
+    }
+    if (!full_name) {
+      alert('Invalid First Name');
+    } else if (!phone) {
+      alert('Invalid phone');
+    } else if (!email) {
+      alert('Invalid Email');
+    } else if (!profile_pic) {
+      alert('Invalid profile_pic');
+    } else if (!doc_back_snap) {
+      alert('Invalid doc_back_snap');
+    } else if (!hourly_rate) {
+      alert('Invalid hourly_rate');
+    } else if (!experience) {
+      alert('Invalid experience');
+    } else if (!doc_front_snap) {
+      alert('Invalid doc_front_snap');
+    } else if (!service_id) {
+      alert('Invalid service_id');
+    } 
+    return false;
+  }
+
    Signup=async()=> {
+     if(this.isFormFilled()){
     var dataToSend = new FormData();
     console.log(this.state)
     dataToSend.append("full_name", this.state.full_name);
@@ -113,6 +165,7 @@ class index extends Component {
       }
      
     });
+  }
   }
   render() {
     return (
@@ -264,7 +317,7 @@ class index extends Component {
 
               {this.state.frontId === '' ? (
                 <View style={styles.LoginView}>
-                  <Text style={styles.mediumBlack}>Email Address</Text>
+                  <Text style={styles.mediumBlack}>Document Front</Text>
                   <View style={styles.borderLine} />
                   <TouchableOpacity
                     onPress={() => this.PicMultiple(0)}
@@ -295,7 +348,7 @@ class index extends Component {
 
               {this.state.backId === '' ? (
                 <View style={styles.LoginView}>
-                  <Text style={styles.mediumBlack}>Email Address</Text>
+                  <Text style={styles.mediumBlack}>Document Back </Text>
                   <View style={styles.borderLine} />
                   <TouchableOpacity
                     onPress={() => this.PicMultiple(1)}
